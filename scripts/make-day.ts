@@ -5,8 +5,12 @@ if (!day) {
 }
 
 const file = Bun.file(`src/day${day}/run.ts`)
-Bun.write(file, `const input = require(\'./input.txt\').default as string
+Bun.write(file, `// ts-workspace-with-variables
+
+const input = require(\'./input.txt\').default as string
 
 export async function run() {
 }
+
+run()
 `)

@@ -1,3 +1,5 @@
+// ts-worksheet
+
 const input = require('./input.txt').default as string
 
 export async function run() {
@@ -15,7 +17,7 @@ function part1(text: string) {
     (acc, match) => acc + Number(match[1]) * Number(match[2]),
     0,
   )
-  console.log('Total: ', total)
+  console.log('Total: ', total) //?
 }
 
 function part2(text: string) {
@@ -33,5 +35,7 @@ function part2(text: string) {
   const total = muls
     .filter(([id]) => !ignoredBoundaries.some(([l, r]) => l < id && id < r))
     .reduce((acc, [, a, b]) => acc + a * b, 0)
-  console.log('Total: ', total)
+  console.log('Total: ', total) //?
 }
+
+run()

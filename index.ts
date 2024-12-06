@@ -7,9 +7,7 @@ if (!day) {
 }
 
 const mod = require(`./src/day${day}/run`)
-if (!mod || !mod.run) {
+if (!mod) {
   console.error(`Day ${day} not found or does not have a run function`)
   process.exit(1)
 }
-
-mod.run()

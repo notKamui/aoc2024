@@ -1,3 +1,5 @@
+// ts-worksheet
+
 const input = require('./input.txt').default as string
 
 export async function run() {
@@ -28,7 +30,7 @@ function part1(left: number[], right: number[]) {
     totalDistance += distance
   }
 
-  console.log('Total distance: ', totalDistance)
+  console.log('Total distance: ', totalDistance) //?
 }
 
 function part2(left: number[], right: number[]) {
@@ -45,5 +47,7 @@ function part2(left: number[], right: number[]) {
     0,
   )
 
-  console.log('Similarity: ', similarity)
+  console.log('Similarity: ', similarity) //?
 }
+
+run()

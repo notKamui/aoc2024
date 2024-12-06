@@ -1,3 +1,5 @@
+// ts-worksheet
+
 import { zipWithNext } from "../utils/zip";
 
 const input = require('./input.txt').default as string
@@ -15,13 +17,13 @@ export async function run() {
 function part1(reports: number[][]) {
   const safe = reports.filter(isSafe)
 
-  console.log('Safe reports: ', safe.length)
+  console.log('Safe reports: ', safe.length) //?
 }
 
 function part2(reports: number[][]) {
   const safe = reports.filter(isSafeWithDampener)
 
-  console.log('Safe reports: ', safe.length)
+  console.log('Safe reports: ', safe.length) //?
 }
 
 function isSafe(report: number[]) {
@@ -43,3 +45,5 @@ function isSafeWithDampener(report: number[]) {
   }
   return false
 }
+
+run()
