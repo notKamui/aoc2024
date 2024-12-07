@@ -18,7 +18,8 @@ const DIRECTIONS = {
 const TARGET = 'XMAS'
 
 export async function run() {
-  const matrix = input.split('\n')
+  const matrix = input
+    .split('\n')
     .filter(Boolean)
     .map((line) => line.split('')) as Cell[][]
 
@@ -69,8 +70,20 @@ function part2(matrix: Cell[][]) {
       const bottomLeft = matrix[y + 1]?.[x - 1]
       const bottomRight = matrix[y + 1]?.[x + 1]
 
-      if (!((topLeft === 'M' && bottomRight === 'S') || (topLeft === 'S' && bottomRight === 'M'))) continue
-      if (!((topRight === 'M' && bottomLeft === 'S') || (topRight === 'S' && bottomLeft === 'M'))) continue
+      if (
+        !(
+          (topLeft === 'M' && bottomRight === 'S') ||
+          (topLeft === 'S' && bottomRight === 'M')
+        )
+      )
+        continue
+      if (
+        !(
+          (topRight === 'M' && bottomLeft === 'S') ||
+          (topRight === 'S' && bottomLeft === 'M')
+        )
+      )
+        continue
 
       matchCount++
     }

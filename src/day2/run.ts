@@ -1,6 +1,6 @@
 // ts-worksheet
 
-import { zipWithNext } from "../utils/zip";
+import { zipWithNext } from '../utils/zip'
 
 const input = require('./input.txt').default as string
 
